@@ -61,7 +61,6 @@ int main()
             employees[totalEmployees] = employee;
             totalEmployees++;
             printf("\nA new employee has been added. \n\n");
-            printf("=======================================\n\n");
         }
         
         //READ
@@ -76,7 +75,6 @@ int main()
                 printf("Salary: %f\n", employees[i].Salary);
                 printf("Position: %s\n", employees[i].Position);
                 printf("Date of joining: %s\n\n", employees[i].DateJoining);
-                printf("=======================================\n\n");
             }
         }
         
