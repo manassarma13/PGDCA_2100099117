@@ -36,15 +36,15 @@ int main()
         printf("Select your option: ");
         scanf("%d", &choice);
 
-        //CREATE        
-        
+        //CREATE
+
         if (choice == 1)
         {
             fflush(stdin);  //This function returns a zero value on success.
                             //If an error occurs,EOF is returned and
                             //the error indicator is set
 
-            printf("Enter employee name: ");
+            printf("\nEnter employee name: ");
             gets(employee.Name);
             printf("Enter employee ID: ");
             scanf("%d", &employee.ID);
@@ -61,25 +61,27 @@ int main()
             employees[totalEmployees] = employee;
             totalEmployees++;
             printf("\nA new employee has been added. \n\n");
+
         }
-        
+
         //READ
-        
+
         else if (choice == 2)
         {
             for (i = 0; i < totalEmployees; i++)
             {
-                printf("Name: %s\n", employees[i].Name);
+                printf("\nName: %s\n", employees[i].Name);
                 printf("Employee ID: %d\n", employees[i].ID);
                 printf("Department name: %s\n", employees[i].DepartmentName);
                 printf("Salary: %f\n", employees[i].Salary);
                 printf("Position: %s\n", employees[i].Position);
                 printf("Date of joining: %s\n\n", employees[i].DateJoining);
+
             }
         }
-        
+
         //UPDATE
-        
+
         else if (choice == 3)
         {
             indexSelectedEmployee = -1;
@@ -96,7 +98,7 @@ int main()
             if (indexSelectedEmployee != -1)
             {
                 fflush(stdin);
-                printf("Employee name: ");
+                printf("\nEmployee name: ");
                 gets(employees[indexSelectedEmployee].Name);
 
                 printf("Employee ID: ");
@@ -127,7 +129,7 @@ int main()
 
         {
             indexSelectedEmployee = -1;
-            printf("Enter Employee ID: ");
+            printf("\nEnter Employee ID: ");
 	        scanf("%d",&employee.ID);
             for (i = 0; i < totalEmployees; i++)
             {
@@ -146,9 +148,9 @@ int main()
                     printf("\nSuccessfully Deleted \n \n");
 		}
             }
-            
-            //RETURN 
-            
+
+            //RETURN
+
             else if (choice == 5)
             {
                 //returning nothing here
@@ -160,4 +162,3 @@ int main()
 
 	 return 0;
 }
-
